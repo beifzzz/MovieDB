@@ -38,9 +38,13 @@ class ViewController: UIViewController {
         view.addSubview(movieTableView)
         NSLayoutConstraint.activate([
             movieLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            movieLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            movieLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-            
+            movieLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            movieLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+    
+            movieTableView.topAnchor.constraint(equalTo: movieLabel.bottomAnchor),
+            movieTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            movieTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            movieTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 
